@@ -18,8 +18,8 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Build JAR with Maven
-        run: ./mvn package
+      - name: Build JAR with Maven Wrapper
+        run: ./mvnw package
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
