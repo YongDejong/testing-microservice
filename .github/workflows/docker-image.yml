@@ -35,4 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: yongdejong/${{ github.repository }}:latest
+          tags: ${{ github.repository }}:latest
