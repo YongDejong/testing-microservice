@@ -1,4 +1,4 @@
-package com.example.demo.datasource.database;
+package com.app.api.datasource.database;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;

@@ -1,4 +1,4 @@
-package com.example.demo.PrimaryEntity;
+package com.app.api.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "tbCustomers")
-public class customerEntity {
+public class CustomerEntity {
 
     @Id
     @Column(name = "cusID")

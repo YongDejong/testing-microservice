@@ -1,8 +1,8 @@
-package com.example.demo.service.serviceImplement;
+package com.app.api.service.ServiceImplement;
 
-import com.example.demo.datasource.PrimaryRepository.CustomerRepository;
-import com.example.demo.dto.PrimaryDto.customerDto;
-import com.example.demo.service.ApiService;
+import com.app.api.datasource.repository.CustomerRepository;
+import com.app.api.dto.response.CustomerDto;
+import com.app.api.service.ApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +15,9 @@ public class ApiServiceImp implements ApiService {
     CustomerRepository customerRepository;
 
     @Override
-    public List<customerDto> listAllCustomer() {
+    public List<CustomerDto> listAllCustomer() {
         return customerRepository.findAll().stream()
-                .map(customerEntity -> new customerDto(
+                .map(customerEntity -> new CustomerDto(
                         customerEntity.getCusID(),
                         customerEntity.getCusName(),
                         customerEntity.getCusContact()

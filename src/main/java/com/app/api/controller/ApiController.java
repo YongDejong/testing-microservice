@@ -1,10 +1,10 @@
-package com.example.demo.controller;
+package com.app.api.controller;
 
-import com.example.demo.PrimaryEntity.customerEntity;
-import com.example.demo.ResponseBody;
-import com.example.demo.datasource.PrimaryRepository.CustomerRepository;
-import com.example.demo.dto.PrimaryDto.customerDto;
-import com.example.demo.service.ApiService;
+import com.app.api.entity.CustomerEntity;
+import com.app.api.responseModel.ResponseBody;
+import com.app.api.datasource.repository.CustomerRepository;
+import com.app.api.dto.response.CustomerDto;
+import com.app.api.service.ApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,13 +26,13 @@ public class ApiController {
     }
 
     @GetMapping("/getCustomer")
-    public ResponseBody<List<customerDto>> getCustomer() {
+    public ResponseBody<List<CustomerDto>> getCustomer() {
         var customers = apiService.listAllCustomer();
         System.out.println(customers);
         return new ResponseBody<>(true, "Customers retrieved successfully", customers);
     }
     @GetMapping("/debug")
-    public List<customerEntity> debug() {
+    public List<CustomerEntity> debug() {
         return customerRepository.findAllNative();
     }
 

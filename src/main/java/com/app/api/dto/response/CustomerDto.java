@@ -1,13 +1,13 @@
-package com.example.demo.dto.PrimaryDto;
+package com.app.api.dto.response;
 
 import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class customerDto {
+
+public class CustomerDto {
     private String id;
     private String name;
     private String contact;
-
 }
